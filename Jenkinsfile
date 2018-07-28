@@ -9,6 +9,9 @@ pipeline {
 			cd $HOME
 			pwd
 			ls -lrt
+			make
+			df -h
+			ping -c4 google.co.in
 			'''
 			}
 		}
