@@ -2,25 +2,14 @@ pipeline {
 	agent any
 	stages {
 		stage ('build') {
-			steps {
-			     echo 'Tetsing'
+		     steps {	  
+			sh 'echo "A one line step"'
+			sh ''' 
+			echo "A multiline step"'
+			cd /tests/results
+			ls -lrt
+			'''
 			}
-		
-		}
-		stage ('test: integration-&-quality') {
-			...
-		}
-		stage ('test: functional') {
-			...
-		}
-		stage ('test: load-&-security') {
-			...
-		}
-		stage ('approval') {
-			...
-		}
-		stage ('deploy:prod') {
-			...
 		}
 	}
 }
