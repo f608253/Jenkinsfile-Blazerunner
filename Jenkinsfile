@@ -12,6 +12,7 @@ pipeline {
 			make
 			df -h
 			ping -c4 google.co.in
+			sh "mvn clean test -Dsuite=SMOKE_TEST -Denvironment=QA"
 			'''
 			}
 		}
